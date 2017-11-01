@@ -1,0 +1,16 @@
+server:
+  port: 0
+spring:
+  application:
+    name: Login-Service
+eureka:
+  instance:
+    hostname: localhost1
+    instance-id: ${spring.application.name}:${eureka.instance.appname}
+    appname: Login-Service
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
